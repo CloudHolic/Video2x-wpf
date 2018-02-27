@@ -59,6 +59,8 @@
     </ApplicationDefinition>
     <Compile Include="Structures\Ffmpeg.cs" />
     <Compile Include="Structures\Waifu2X.cs" />
+    <Compile Include="Utils\EnumExtensions.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
