@@ -6,26 +6,26 @@ using Video2x_wpf.Utils;
 
 namespace Video2x_wpf.Structures
 {
+    public enum Method
+    {
+        Cpu,
+        Gpu,
+        Cudnn
+    }
+
+    public enum Mode
+    {
+        [Description("noise")] Noise,
+        [Description("scale")] Scale,
+        [Description("noise_scale")] NoiseScale,
+        [Description("auto_scale")] AutoScale
+    }
+
     /// <summary>
     /// Communicates with waifu2x cui engine
     /// </summary>
     public static class Waifu2X
     {
-        public enum Method
-        {
-            Cpu,
-            Gpu,
-            Cudnn
-        }
-
-        public enum Mode
-        {
-            [Description("noise")]Noise,
-            [Description("scale")]Scale,
-            [Description("noise_scale")]NoiseScale,
-            [Description("auto_scale")]AutoScale
-        }
-
         public static void Upscale(string waifuPath, Method method, string input, string output, int width, int height, int noise, Mode mode)
         {
             var worker = WorkerThread.Instance;

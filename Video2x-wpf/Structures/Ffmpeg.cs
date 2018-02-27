@@ -15,7 +15,7 @@ namespace Video2x_wpf.Structures
             _worker = WorkerThread.Instance;
             _filePath = path;
         }
-        
+
         /// <summary>
         /// Extract every frame from original videos
         /// </summary>
